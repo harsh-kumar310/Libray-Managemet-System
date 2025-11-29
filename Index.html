@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Library Management App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Library Management App</h1>
+
+  <section id="book-form">
+    <h2 id="form-title">Add New Book</h2>
+    <form id="libraryForm" class="grid-2">
+      <input type="hidden" id="bookIndex" />
+
+      <label>
+        Title
+        <input type="text" id="title" placeholder="e.g. The Hobbit" required />
+      </label>
+
+      <label>
+        Author
+        <input type="text" id="author" placeholder="e.g. J. R. R. Tolkien" required />
+      </label>
+
+      <label>
+        Year
+        <input type="number" id="year" placeholder="e.g. 1937" min="0" required />
+      </label>
+
+      <label>
+        Roll&nbsp;No.
+        <input type="text" id="rollNo" placeholder="e.g. 22CS101" required />
+      </label>
+
+      <label>
+        Rack&nbsp;No.
+        <input type="text" id="rackNo" placeholder="e.g. R12‑B" required />
+      </label>
+
+      <button type="submit" id="saveBtn">Save</button>
+      <button type="button" id="cancelEdit" class="danger" style="display:none;">Cancel</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Search Books</h2>
+    <input type="text" id="searchInput" placeholder="Search by title or author…" />
+  </section>
+
+  <section>
+    <h2>Book List</h2>
+    <table id="booksTable">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Year</th>
+          <th>Roll&nbsp;No.</th>
+          <th>Rack&nbsp;No.</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section id="issue-form">
+    <h2 id="issue-title">Issue Book to Student</h2>
+    <form id="issueBookForm" class="grid-2">
+      <input type="hidden" id="issueIndex" />
+
+      <label>
+        Student&nbsp;Name
+        <input type="text" id="studentName" placeholder="e.g. Anita Sharma" required />
+      </label>
+
+      <label>
+        Mobile&nbsp;No.
+        <input type="tel" id="studentMobile" placeholder="e.g. 9876543210" pattern="[0-9]{10}" required />
+      </label>
+
+      <label>
+        Subject / Book&nbsp;Title
+        <input type="text" id="subjectTitle" placeholder="e.g. Operating Systems" required />
+      </label>
+
+      <label>
+        Author
+        <input type="text" id="subjectAuthor" placeholder="e.g. Galvin" required />
+      </label>
+
+      <label>
+        Issue&nbsp;Date
+        <input type="date" id="issueDate" required />
+      </label>
+
+      <label>
+        Due&nbsp;Date
+        <input type="date" id="dueDate" required />
+      </label>
+
+      <button type="submit" id="issueSaveBtn">Save</button>
+      <button type="button" id="cancelIssueEdit" class="danger" style="display:none;">Cancel</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Issued Books</h2>
+    <table id="issuesTable">
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>Mobile</th>
+          <th>Book / Subject</th>
+          <th>Author</th>
+          <th>Issue&nbsp;Date</th>
+          <th>Due&nbsp;Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</main>
+</body>
+</html>

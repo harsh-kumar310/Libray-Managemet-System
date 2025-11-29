@@ -1,0 +1,38 @@
+:root { font-family: Arial, Helvetica, sans-serif; }
+body  { margin:0; background:#f8f9fa; }
+main  { padding:20px; background:rgb(149 134 243); min-height:100vh; }
+
+h1 {
+  margin:0 0 30px;
+  padding:15px 0 10px;
+  text-align:center;
+  color:#fff;
+  border-bottom:4px solid #fff;
+}
+
+section {
+  background:#fff; border-radius:12px; padding:20px; margin-bottom:25px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+label { display:block; margin-bottom:10px; }
+input[type="text"], input[type="number"], input[type="date"], input[type="tel"]{
+  width:100%; padding:8px; margin-top:4px; border:1px solid #ced4da;
+  border-radius:6px; box-sizing:border-box;
+}
+button{
+  cursor:pointer; padding:10px 16px; border:none; border-radius:6px;
+  margin-top:10px; margin-right:6px; background:#0d6efd; color:#fff;
+  transition:background .2s;
+}
+button:hover      { background:#0b5ed7; }
+button.danger     { background:#dc3545; }
+button.danger:hover{ background:#bb2d3b; }
+
+table{ width:100%; border-collapse:collapse; }
+th,td{ padding:12px; text-align:left; border-bottom:1px solid #dee2e6; }
+th   { background:#e9ecef; }
+
+@media (min-width:768px){
+  form.grid-2   { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+  form.grid-2 button{ grid-column:span 2; }
+}
